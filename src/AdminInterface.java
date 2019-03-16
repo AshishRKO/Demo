@@ -16,4 +16,6 @@ public interface AdminInterface {
     public abstract void offerRide(OfferRide offerRide);
 
     public abstract void bookRide(RideBooking rideBooking);
+
+    public abstract void getTotalRides(User user);
 }

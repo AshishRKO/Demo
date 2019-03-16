@@ -94,7 +94,14 @@ public class Admin implements AdminInterface{
 
         // remove offer ride
 
+        // update count of user
+
         rideBookingList.add(rideBooking);
+    }
+
+    public void getTotalRides(User user)
+    {
+        System.out.println(user);
     }
 
 
