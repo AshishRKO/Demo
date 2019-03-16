@@ -10,7 +10,7 @@
 public class Vehicle {
 
     String userId;
-    String userName;
+    String driverName;
     String vehicleName;
     String vehicleNumber;
     String id;
@@ -23,12 +23,12 @@ public class Vehicle {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getDriverName() {
+        return driverName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
     }
 
     public String getVehicleName() {
