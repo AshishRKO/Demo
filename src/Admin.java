@@ -36,7 +36,8 @@ public class Admin {
         rideMap.put(rideTourMap, offerRide);
     }
 
-    public void findRide(RideBooking rideBooking) {
+    public void selectRide(RideBooking rideBooking) {
+
 
     }
 
