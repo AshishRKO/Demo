@@ -9,5 +9,7 @@
  */
 public abstract class Onboarding {
 
-    abstract String add_user(String name, boolean sex, int age);
+    abstract String add_user(String name, String sex, int age);
+
+    abstract void add_vehicle(String userId, String driverName, String vehicleName, String vehicleNumber);
 }

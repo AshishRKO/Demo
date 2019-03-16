@@ -1,18 +1,13 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * @author sumedha
- * @version $Id: User.java, v 0.1 2019-03-16 10:33 AM sumedha Exp $$
- */
 public class User {
     String id;
     String name;
-    boolean sex;
+    String sex;
     int age;
-    Vehicle vehicle;
+
+    List<Vehicle> vehicleList = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -30,11 +25,11 @@ public class User {
         this.name = name;
     }
 
-    public boolean isSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -46,11 +41,22 @@ public class User {
         this.age = age;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public List<Vehicle> getVehicleList() {
+        return vehicleList;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void setVehicleList(List<Vehicle> vehicleList) {
+        this.vehicleList = vehicleList;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age=" + age +
+                ", vehicleList=" + vehicleList +
+                '}';
     }
 }

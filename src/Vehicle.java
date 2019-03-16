@@ -1,19 +1,10 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
 
-/**
- * @author sumedha
- * @version $Id: Vehicle.java, v 0.1 2019-03-16 10:34 AM sumedha Exp $$
- */
 public class Vehicle {
 
     String userId;
     String driverName;
     String vehicleName;
     String vehicleNumber;
-    String id;
 
     public String getUserId() {
         return userId;
@@ -47,11 +38,14 @@ public class Vehicle {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "userId='" + userId + '\'' +
+                ", driverName='" + driverName + '\'' +
+                ", vehicleName='" + vehicleName + '\'' +
+                ", vehicleNumber='" + vehicleNumber + '\'' +
+                '}';
     }
 }
