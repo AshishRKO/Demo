@@ -7,13 +7,13 @@ public class Main {
     public static void main(String[] args) {
 
         Main main = new Main();
-        main.test1();
-        main.test2();
-        main.test3();
+        main.onboard();
+        main.offerRide();
+        main.bookRide();
 
     }
 
-    public void test1() {
+    public void onboard() {
 
         admin.addUser(new User("Rohan", "M", 36, true, true));
         admin.addVehicle(new Car("Rohan", "Swift", "KA-01-12345", 4));
@@ -50,7 +50,7 @@ public class Main {
         return date1;
     }
 
-    public void test2() {
+    public void offerRide() {
 
         Date date1 = getDate(2019, 1, 25, 8);
         admin.offerRide(new OfferRide("Rohan", "Hyderabad", 1, "Swift,KA-01-12345", "Bangalore", date1, "13 hrs"));
@@ -68,7 +68,7 @@ public class Main {
     }
 
 
-    public void test3() {
+    public void bookRide() {
 
         admin.bookRide(new RideBooking("Nandini", "Bangalore", "Mysore", 1, SelectionStrategy.FASTEST));
 

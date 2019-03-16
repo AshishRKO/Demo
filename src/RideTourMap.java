@@ -1,14 +1,6 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
 
 import java.util.Objects;
 
-/**
- * @author Ashish Barthwal
- * @version $Id: RideTourMap.java, v 0.1 2019-03-16 11:08 AM Ashish Barthwal $$
- */
 public class RideTourMap {
 
     private String source;
