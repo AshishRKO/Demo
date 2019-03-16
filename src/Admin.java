@@ -74,7 +74,7 @@ public class Admin implements AdminInterface{
 
         for(OfferRide offerRide : offerRideList)
         {
-            if(rideBooking.getSelectionStrategy() == SelectionStrategy.FASTEST)
+            if(rideBooking.getSelectionStrategy() == SelectionStrategy.FASTEST && offerRide.getAvaialbleSeats() >= rideBooking.getSeats())
             {
                 int duration = Integer.parseInt(offerRide.getDuration().split(" ")[0]);
                 if(min>duration)
@@ -82,7 +82,7 @@ public class Admin implements AdminInterface{
                     res = offerRide;
                 }
             }
-            else if(rideBooking.getSelectionStrategy() == SelectionStrategy.EARLIEST)
+            else if(rideBooking.getSelectionStrategy() == SelectionStrategy.EARLIEST && offerRide.getAvaialbleSeats() >= rideBooking.getSeats())
             {
                 if(minDate.after(offerRide.getStartTime()))
                 {
@@ -91,10 +91,20 @@ public class Admin implements AdminInterface{
             }
         }
         System.out.println("Your Ride is = "+res);
+        res.setAvaialbleSeats(res.getAvaialbleSeats()-rideBooking.getSeats());
 
         // remove offer ride
 
+
+
         // update count of user
+        for(User user : userList)
+        {
+            if(user.getName().equalsIgnoreCase(rideBooking.getBookerName()))
+            {
+                user.setRidesTaken(user.getRidesTaken()+1);
+            }
+        }
 
         rideBookingList.add(rideBooking);
     }
