@@ -42,6 +42,17 @@ public class Admin {
 
     public void bookRide(RideBooking rideBooking)
     {
+        RideTourMap rideTourMap = new RideTourMap(rideBooking.getSource(), rideBooking.getDestination());
+        if(!rideMap.containsKey(rideTourMap)){
+            System.out.println("No Rides Found");
+        }
+
+        OfferRide offerRide = rideMap.get(rideTourMap);
+
+        System.out.println("Your Ride is = "+offerRide);
+
+        // remove offer ride
+
         rideBookingList.add(rideBooking);
     }
 

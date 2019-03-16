@@ -13,6 +13,7 @@ public class RideTourMap {
 
     private String source;
     private String destination;
+    private String name;
 
     public RideTourMap(String source, String destination) {
         this.source = source;
@@ -57,19 +58,39 @@ public class RideTourMap {
     }
 
 
+    /**
+     * Getter method for property <tt>name</tt>.
+     *
+     * @return property value of name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Setter method for property <tt>name</tt>.
+     *
+     * @param name value to be assigned to property name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof RideTourMap)) return false;
         RideTourMap that = (RideTourMap) o;
         return Objects.equals(getSource(), that.getSource()) &&
-                Objects.equals(getDestination(), that.getDestination());
+                Objects.equals(getDestination(), that.getDestination()) &&
+                Objects.equals(getName(), that.getName());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(getSource(), getDestination());
+        return Objects.hash(getSource(), getDestination(), getName());
     }
 
     @Override
