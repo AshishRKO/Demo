@@ -17,5 +17,10 @@ public class RideBooking {
     private Vehicle vehicle;
     private SelectionStrategy selectionStrategy;
 
-
+    public RideBooking(String source, String destination, int seats, SelectionStrategy selectionStrategy) {
+        this.source = source;
+        this.destination = destination;
+        this.seats = seats;
+        this.selectionStrategy = selectionStrategy;
+    }
 }

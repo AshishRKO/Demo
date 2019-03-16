@@ -68,4 +68,9 @@ public class Main {
 
         print();
     }
+
+
+    public void select_ride(String source, String destination, int seats, SelectionStrategy selectionStrategy) {
+        admin.findRide(new RideBooking(source, destination, seats, selectionStrategy));
+    }
 }
