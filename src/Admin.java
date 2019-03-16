@@ -39,6 +39,11 @@ public class Admin {
         rideMap.put(rideTourMap, offerRide);
     }
 
+    public void selectRide(RideBooking rideBooking) {
+
+
+    }
+
 
     public void bookRide(RideBooking rideBooking)
     {
