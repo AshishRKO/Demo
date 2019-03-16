@@ -57,7 +57,7 @@ public class RideTourMap {
 
     @Override
     public String toString() {
-        return "RideTourMap{" +
+        return "\nRideTourMap{" +
                 "source='" + source + '\'' +
                 ", destination='" + destination + '\'' +
                 '}';

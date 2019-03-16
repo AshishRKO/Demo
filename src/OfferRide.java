@@ -162,7 +162,7 @@ public class OfferRide {
 
     @Override
     public String toString() {
-        return "OfferRide{" +
+        return "\n OfferRide{" +
                 "driverName='" + driverName + '\'' +
                 ", source='" + source + '\'' +
                 ", seats=" + seats +
