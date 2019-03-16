@@ -79,6 +79,7 @@ public class Admin implements AdminInterface{
                 int duration = Integer.parseInt(offerRide.getDuration().split(" ")[0]);
                 if(min>duration)
                 {
+                    min = duration;
                     res = offerRide;
                 }
             }
@@ -86,6 +87,7 @@ public class Admin implements AdminInterface{
             {
                 if(minDate.after(offerRide.getStartTime()))
                 {
+                    minDate = offerRide.getStartTime();
                     res = offerRide;
                 }
             }
@@ -103,8 +105,11 @@ public class Admin implements AdminInterface{
             if(user.getName().equalsIgnoreCase(rideBooking.getBookerName()))
             {
                 user.setRidesTaken(user.getRidesTaken()+1);
+                System.out.println("Rides Taken = "+user);
             }
         }
+
+        System.out.println("Rides Taken = "+userList);
 
         rideBookingList.add(rideBooking);
     }

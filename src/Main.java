@@ -15,7 +15,8 @@ public class Main {
 
     public void test1() {
 
-        admin.addUser(new User("Rohan", "M", 36, true, true));
+        admin.addUser(new User("Rohan", "M", 36, false, true));
+
         admin.addVehicle(new Car("Rohan", "Swift", "KA-01-12345", 4));
 
         admin.addUser(new User("Shashank", "M", 29, true, true));
@@ -52,8 +53,8 @@ public class Main {
 
     public void test2() {
 
-        Date date1 = getDate(2019, 1, 25, 8);
-        admin.offerRide(new OfferRide("Rohan", "Hyderabad", 1, "Swift,KA-01-12345", "Bangalore", date1, "13 hrs"));
+        Date date1 = getDate(2018, 1, 25, 8);
+        admin.offerRide(new OfferRide("Rohan", "Hyderabad", 3, "Swift,KA-01-12345", "Bangalore", date1, "3 hrs"));
 
         Date date2 = getDate(2019, 1, 29, 18);
         admin.offerRide(new OfferRide("Shipra", "Bangalore", 1, "Scooty,KA-12-12332", "Mysore", date2, "10 hrs"));
@@ -72,6 +73,8 @@ public class Main {
 
         admin.bookRide(new RideBooking("Nandini", "Bangalore", "Mysore", 1, SelectionStrategy.FASTEST));
 
+        admin.bookRide(new RideBooking("Nandini", "Hyderabad", "Bangalore", 1, SelectionStrategy.FASTEST));
+
         admin.bookRide(new RideBooking("Gaurav", "Bangalore", "Mysore", 1, SelectionStrategy.EARLIEST));
 
         admin.bookRide(new RideBooking("Shashank", "Mumbai", "Bangalore", 1, SelectionStrategy.FASTEST));
@@ -79,5 +82,6 @@ public class Main {
         admin.bookRide(new RideBooking("Rohan", "Hyderabad", "Bangalore", 1, SelectionStrategy.FASTEST));
 
         print();
+
     }
 }

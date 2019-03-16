@@ -160,6 +160,7 @@ public class User {
         this.ridesTaken = ridesTaken;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
@@ -168,6 +169,9 @@ public class User {
                 ", age=" + age +
                 ", isDriver=" + isDriver +
                 ", isPassenger=" + isPassenger +
+                ", ridesOffered=" + ridesOffered +
+                ", ridesTaken=" + ridesTaken +
+                ", vehicleList=" + vehicleList +
                 '}';
     }
 }
