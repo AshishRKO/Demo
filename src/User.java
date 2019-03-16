@@ -1,14 +1,8 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+
 
 import java.util.List;
 
-/**
- * @author Ashish Barthwal
- * @version $Id: User.java, v 0.1 2019-03-16 10:21 AM Ashish Barthwal $$
- */
+
 public class User {
 
     private String name;
