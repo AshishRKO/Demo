@@ -3,6 +3,8 @@
  * Copyright (c) 2004-2019 All Rights Reserved.
  */
 
+import java.util.Objects;
+
 /**
  * @author Ashish Barthwal
  * @version $Id: RideTourMap.java, v 0.1 2019-03-16 11:08 AM Ashish Barthwal $$
@@ -54,6 +56,21 @@ public class RideTourMap {
         this.destination = destination;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof RideTourMap)) return false;
+        RideTourMap that = (RideTourMap) o;
+        return Objects.equals(getSource(), that.getSource()) &&
+                Objects.equals(getDestination(), that.getDestination());
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getSource(), getDestination());
+    }
 
     @Override
     public String toString() {

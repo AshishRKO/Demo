@@ -3,6 +3,8 @@
  * Copyright (c) 2004-2019 All Rights Reserved.
  */
 
+import java.util.List;
+
 /**
  * @author Ashish Barthwal
  * @version $Id: User.java, v 0.1 2019-03-16 10:21 AM Ashish Barthwal $$
@@ -18,6 +20,8 @@ public class User {
 
     private int ridesOffered;
     private int ridesTaken;
+
+    private List<Vehicle> vehicleList;
 
     public User(String name, String gender, int age, boolean isDriver, boolean isPassenger) {
         this.name = name;

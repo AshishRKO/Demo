@@ -13,7 +13,7 @@ public class OfferRide {
 
     private String driverName;
     private String source;
-    private int seats;
+    private int avaialbleSeats;
     private String vehicle;
     private String destination;
 
@@ -26,7 +26,7 @@ public class OfferRide {
     public OfferRide(String driverName, String source, int seats, String vehicle, String destination, Date startTime, String duration) {
         this.driverName = driverName;
         this.source = source;
-        this.seats = seats;
+        this.avaialbleSeats = seats;
         this.vehicle = vehicle;
         this.destination = destination;
         this.startTime = startTime;
@@ -92,8 +92,8 @@ public class OfferRide {
      *
      * @return property value of seats
      */
-    public int getSeats() {
-        return seats;
+    public int getAvaialbleSeats() {
+        return avaialbleSeats;
     }
 
     /**
@@ -101,8 +101,8 @@ public class OfferRide {
      *
      * @param seats value to be assigned to property seats
      */
-    public void setSeats(int seats) {
-        this.seats = seats;
+    public void setAvaialbleSeats(int seats) {
+        this.avaialbleSeats = seats;
     }
 
     /**
@@ -165,7 +165,7 @@ public class OfferRide {
         return "\n OfferRide{" +
                 "driverName='" + driverName + '\'' +
                 ", source='" + source + '\'' +
-                ", seats=" + seats +
+                ", avaialbleSeats=" + avaialbleSeats +
                 ", vehicle='" + vehicle + '\'' +
                 ", destination='" + destination + '\'' +
                 ", startTime=" + startTime +

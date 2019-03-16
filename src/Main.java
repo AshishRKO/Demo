@@ -8,6 +8,7 @@ public class Main {
 
         Main main = new Main();
         main.test1();
+        main.test2();
         main.test3();
 
     }
@@ -20,9 +21,7 @@ public class Main {
         admin.addUser(new User("Shashank", "M", 29, true, true));
         admin.addVehicle(new Car("Shashank", "Baleno", "TS-05-62395", 4));
 
-
         admin.addUser(new User("Nandini", "F", 29, true, true));
-
 
         admin.addUser(new User("Shipra", "F", 27, true, true));
         admin.addVehicle(new Car("Shipra", "Polo", "KA-05-41491", 4));
@@ -35,7 +34,8 @@ public class Main {
     public void print() {
         System.out.println("Users = " + Admin.userList);
         System.out.println("Vehicles = " + Admin.vehicleList);
-        System.out.println("OfferRises = " + Admin.rideMap);
+        System.out.println("OfferRides = " + Admin.rideMap);
+        System.out.println("BookRides = " + Admin.rideBookingList);
     }
 
     public Date getDate(int year, int month, int date, int hour) {
@@ -50,7 +50,7 @@ public class Main {
         return date1;
     }
 
-    public void test3() {
+    public void test2() {
 
         Date date1 = getDate(2019, 1, 25, 8);
         admin.offerRide(new OfferRide("Rohan", "Hyderabad", 1, "Swift,KA-01-12345", "Bangalore", date1, "13 hrs"));
@@ -64,7 +64,19 @@ public class Main {
         Date date4 = getDate(2019, 1, 27, 10);
         admin.offerRide(new OfferRide("Shashank", "Hyderabad", 2, "Baleno,TS-05-62395", "Bangalore", date4, "14 hrs"));
 
+        print();
+    }
 
+
+    public void test3() {
+
+        admin.bookRide(new RideBooking("Nandini", "Bangalore", "Mysore", 1, SelectionStrategy.FASTEST));
+
+        admin.bookRide(new RideBooking("Gaurav", "Bangalore", "Mysore", 1, SelectionStrategy.EARLIEST));
+
+        admin.bookRide(new RideBooking("Shashank", "Mumbai", "Bangalore", 1, SelectionStrategy.FASTEST));
+
+        admin.bookRide(new RideBooking("Rohan", "Hyderabad", "Bangalore", 1, SelectionStrategy.FASTEST));
 
         print();
     }
