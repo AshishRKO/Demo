@@ -1,12 +1,4 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
 
-/**
- * @author Ashish Barthwal
- * @version $Id: Vehicle.java, v 0.1 2019-03-16 10:33 AM Ashish Barthwal $$
- */
 public abstract class Vehicle {
     private String driverName;
     private String carName;

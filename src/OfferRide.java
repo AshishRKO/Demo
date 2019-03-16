@@ -1,14 +1,7 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
 
 import java.util.Date;
 
-/**
- * @author Ashish Barthwal
- * @version $Id: OfferRide.java, v 0.1 2019-03-16 11:03 AM Ashish Barthwal $$
- */
+
 public class OfferRide {
 
     private String driverName;
