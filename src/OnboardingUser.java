@@ -11,7 +11,7 @@ import java.util.List;
  * @author sumedha
  * @version $Id: OnboardingUser.java, v 0.1 2019-03-16 10:39 AM sumedha Exp $$
  */
-public class OnboardingUser extends Onboarding {
+public class OnboardingUser implements Onboarding {
 
     List<User> users = new ArrayList<>();
     HashMap<String, User> userHashMap = new HashMap<>();

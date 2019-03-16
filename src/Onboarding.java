@@ -7,9 +7,9 @@
  * @author sumedha
  * @version $Id: OnboardingUser.java, v 0.1 2019-03-16 10:37 AM sumedha Exp $$
  */
-public abstract class Onboarding {
+public interface Onboarding {
 
-    abstract String add_user(String name, String sex, int age);
+     String add_user(String name, String sex, int age);
 
-    abstract void add_vehicle(String userId, String driverName, String vehicleName, String vehicleNumber);
+     void add_vehicle(String userId, String driverName, String vehicleName, String vehicleNumber);
 }
