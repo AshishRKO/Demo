@@ -39,15 +39,25 @@ public class Admin {
         RideTourMap rideTourMap = new RideTourMap(rideBooking.getSource(), rideBooking.getDestination());
         if(!rideMap.containsKey(rideTourMap)){
             System.out.println("No Rides Found");
+            return;
         }
 
         OfferRide offerRide = rideMap.get(rideTourMap);
+        int seats = offerRide.getAvaialbleSeats();
 
-        System.out.println("Your Ride is = "+offerRide);
+        if(seats >= rideBooking.getSeats()) {
+            System.out.println("Your Ride is = "+offerRide);
 
-        // remove offer ride
+            // remove offer ride
+            rideMap.get(rideTourMap).setAvaialbleSeats(seats - rideBooking.getSeats());
 
-        rideBookingList.add(rideBooking);
+            rideBookingList.add(rideBooking);
+        } else {
+            System.out.println("No Rides Found");
+            return;
+        }
+
+
     }
 
 
