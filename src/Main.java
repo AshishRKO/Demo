@@ -2,7 +2,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
-    Admin admin = new Admin();
+    AdminInterface admin = new Admin();
 
     public static void main(String[] args) {
 

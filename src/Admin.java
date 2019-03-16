@@ -14,7 +14,7 @@ import java.util.Map;
  * @author Ashish Barthwal
  * @version $Id: RideSharing.java, v 0.1 2019-03-16 10:29 AM Ashish Barthwal $$
  */
-public class Admin {
+public class Admin implements AdminInterface{
 
     public static List<User> userList = new ArrayList<>();
 
@@ -24,17 +24,20 @@ public class Admin {
 
     public static List<RideBooking> rideBookingList = new ArrayList<>();
 
+    @Override
     public void addUser(User user)
     {
         userList.add(user);
     }
 
 
+    @Override
     public void addVehicle(Vehicle vehicle)
     {
         vehicleList.add(vehicle);
     }
 
+    @Override
     public void offerRide(OfferRide offerRide)
     {
         RideTourMap rideTourMap = new RideTourMap(offerRide.getSource(), offerRide.getDestination());
@@ -52,6 +55,7 @@ public class Admin {
     }
 
 
+    @Override
     public void bookRide(RideBooking rideBooking)
     {
         RideTourMap rideTourMap = new RideTourMap(rideBooking.getSource(), rideBooking.getDestination());
