@@ -4,7 +4,9 @@
  */
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Ashish Barthwal
@@ -14,6 +16,8 @@ public class Admin {
 
     public static List<User> userList = new ArrayList<>();
     public static List<Vehicle> vehicleList = new ArrayList<>();
+
+    public static Map<RideTourMap, OfferRide> rideMap = new HashMap<>();
 
     public void addUser(User user)
     {
@@ -25,6 +29,13 @@ public class Admin {
     {
         vehicleList.add(vehicle);
     }
+
+    public void offerRide(OfferRide offerRide)
+    {
+        RideTourMap rideTourMap = new RideTourMap(offerRide.getSource(), offerRide.getDestination());
+        rideMap.put(rideTourMap, offerRide);
+    }
+
 
 
 }

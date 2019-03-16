@@ -16,12 +16,17 @@ public class User {
     private boolean isDriver;
     private boolean isPassenger;
 
+    private int ridesOffered;
+    private int ridesTaken;
+
     public User(String name, String gender, int age, boolean isDriver, boolean isPassenger) {
         this.name = name;
         this.gender = gender;
         this.age = age;
         this.isDriver = isDriver;
         this.isPassenger = isPassenger;
+        ridesOffered = 0;
+        ridesTaken = 0;
     }
 
     /**
@@ -112,6 +117,43 @@ public class User {
      */
     public void setPassenger(boolean passenger) {
         isPassenger = passenger;
+    }
+
+
+    /**
+     * Getter method for property <tt>ridesOffered</tt>.
+     *
+     * @return property value of ridesOffered
+     */
+    public int getRidesOffered() {
+        return ridesOffered;
+    }
+
+    /**
+     * Setter method for property <tt>ridesOffered</tt>.
+     *
+     * @param ridesOffered value to be assigned to property ridesOffered
+     */
+    public void setRidesOffered(int ridesOffered) {
+        this.ridesOffered = ridesOffered;
+    }
+
+    /**
+     * Getter method for property <tt>ridesTaken</tt>.
+     *
+     * @return property value of ridesTaken
+     */
+    public int getRidesTaken() {
+        return ridesTaken;
+    }
+
+    /**
+     * Setter method for property <tt>ridesTaken</tt>.
+     *
+     * @param ridesTaken value to be assigned to property ridesTaken
+     */
+    public void setRidesTaken(int ridesTaken) {
+        this.ridesTaken = ridesTaken;
     }
 
     @Override
